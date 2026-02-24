@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: var(--bgcolor);
+    font-family: var(--primaryfont);
+    box-sizing: border-box;
+}
+/*  This for Remove Arrow on Number Input  */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.flex{
+    display: flex;
+    gap:10px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --primarycolor:#ffffff;
+    --bgcolor:#e8e8e8;
+    --primaryfont:sans-serif;
+    --btncolor:#1a4bfff4;
+}
+input,
+button:focus{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6,p,span,img{
+    background-color: transparent;
+}
