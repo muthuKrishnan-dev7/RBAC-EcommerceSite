@@ -31,14 +31,14 @@ export default function Nav() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="flex btn-div">
+      <div className="btn-div">
         <button className="flex btnnav" onClick={loginOpen}>
           {" "}
-          <FaRegUserCircle className="ic2" /> Login
+          <FaRegUserCircle className="ic2" /> <span>Login</span>
         </button>
         <button className="flex btnnav">
           {" "}
-          <TiShoppingCart className="ic2" /> Cart
+          <TiShoppingCart className="ic2" /> <span>Cart</span>
         </button>
       </div>
       <Login UserClick={loginOpen} State={{ log: login, ad: Admin }} />

@@ -3,16 +3,21 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App.jsx";
 import Admin from "./Admin.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Order from "./Order.jsx";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
   },
   {
     path: "/admin",
-    element: <Admin />, 
+    element: <Admin />,
+  },
+  {
+    path: "/Order",
+    element: <Order />,
   },
 ]);
 

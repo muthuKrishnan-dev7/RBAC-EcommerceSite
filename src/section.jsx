@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaShoppingCart, FaRegHeart } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import Order from "./Order";
 
 export default function Section1(z) {
   let { data, searchdata } = z;
@@ -23,11 +25,17 @@ export default function Section1(z) {
       });
   }, []);
 
+  const navigate = useNavigate();
+
+  const orderpg = (z) => {
+    navigate("/Order", { state: { prddata: z } });
+  };
+
   console.log(searchdata);
 
   return (
     <div className="sec1" id="Cont">
-      {Data.filter((prd) => prd.category === `${data}`).map(function (item) {
+      {Data.filter((prd) => prd.category).map(function (item) {
         return (
           <div className="boxcards" key={item.id}>
             <div className="carti">
@@ -42,7 +50,7 @@ export default function Section1(z) {
             <h5 className="desc">{item.des1}</h5>
             <p className="price">₹{item.price}</p>
             <p className="rating">Ratings ⭐ {item.rating}</p>
-            <button>Order Now</button>
+            <button className="boxcardsbutton" onClick={() => orderpg(item)}>Order Now</button>
           </div>
         );
       })}
