@@ -27,8 +27,6 @@ export default function Section1(z) {
   }, []);
 
   let [cartitem, setCartitem] = useState();
-  // console.log(cartitem);
-  
 
   const navigate = useNavigate();
 

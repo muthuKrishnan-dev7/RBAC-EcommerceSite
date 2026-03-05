@@ -12,7 +12,7 @@ import prd5 from "./assets/kit.webp";
 import prd6 from "./assets/mobile.webp";
 import prd7 from "./assets/shoe.webp";
 import prd8 from "./assets/toys.webp";
-import prd9 from "./assets/tv.webp";
+import prd9 from "./assets/tv.webp"; 
 
 export default function Home() {
   const [index, setIndex] = useState(0);

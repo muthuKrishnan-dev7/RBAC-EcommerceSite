@@ -84,22 +84,22 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid lightgray;
+    background-color: rgb(255, 255, 255);
   }
   .addtocart > div {
     width: 100%;
-    background-color: rgb(255, 255, 255);
   }
   .cartcp {
     right: 0;
   }
   .top {
-    height: 65px;
+    height: 10%;
     justify-content: end;
     padding-right: 20px;
   }
   .cartcross {
     color: black;
-    font-size: 35px;
+    font-size: 80%;
     background-color: transparent;
   }
   .middle {
@@ -108,7 +108,7 @@
     border: 1px solid lightgray;
   }
   .bottom {
-    height: 90px;
+    height: 10%;
   }
 
   /* Login Box on Nav */
@@ -252,8 +252,6 @@
     width: 130px;
     height: 100px;
     background-color: transparent;
-    /* overflow: hidden; */
-    /* padding: 10px; */
   }
   .boxcards img {
     width: 110px;
@@ -321,14 +319,31 @@
   .Orderpg {
     height: 100vh;
     width: 100%;
+    position: relative;
     border: 2px solid rgba(0, 0, 0, 0);
   }
   .ord {
     width: 97%;
     height: 80vh;
     margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     margin-top: 105px;
     background-color: #fff;
+  }
+  .addpg {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    flex-direction: column;
+  }
+  .addpg input {
+    height: 25px;
+    width: 300px;
+    padding: 2px 10px 2px 10px;
+    border: 1px solid lightgray;
   }
   .orderitem {
     width: 60%;
@@ -349,6 +364,14 @@
   .ryt {
     background-color: #fff;
     flex-direction: column;
+  }
+  .payic {
+    background-color: transparent;
+  }
+  .giff {
+    height: 300px;
+    width: 90%;
+    background-color: transparent;
   }
 
   /* Contact Page */
@@ -390,7 +413,7 @@
 }
 
 /* style for Tablet */
-@media (min-width: 768px) {
+@media (min-width: 426px) {
   body::-webkit-scrollbar {
     display: none;
   }
@@ -454,6 +477,12 @@
   }
   .sectiononnav {
     display: none;
+  }
+
+  /* Login Box on Nav */
+  .login {
+    height: 250px;
+    width: 425px;
   }
 
   /* Home Page */
@@ -694,6 +723,12 @@
     margin-top: 105px;
     background-color: #fff;
     border: 2px solid yellowgreen;
+  }
+
+  .giff {
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
   }
 
   /* Contact Page */
