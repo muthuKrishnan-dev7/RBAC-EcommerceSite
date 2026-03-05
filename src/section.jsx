@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaShoppingCart, FaRegHeart } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import Order from "./Order";
+import Nav from "./nav";
 
 export default function Section1(z) {
   let { data, searchdata } = z;
@@ -25,13 +26,15 @@ export default function Section1(z) {
       });
   }, []);
 
+  let [cartitem, setCartitem] = useState();
+  // console.log(cartitem);
+  
+
   const navigate = useNavigate();
 
   const orderpg = (z) => {
     navigate("/Order", { state: { prddata: z } });
   };
-
-  console.log(searchdata);
 
   return (
     <div className="sec1" id="Cont">
@@ -39,9 +42,14 @@ export default function Section1(z) {
         return (
           <div className="boxcards" key={item.id}>
             <div className="carti">
-              {" "}
-              <FaRegHeart className="carticon" />{" "}
-              <FaShoppingCart className="carticon" />{" "}
+              <FaRegHeart className="carticon" />
+              <FaShoppingCart
+                className="carticon"
+                onClick={() => setCartitem(item)}
+              />
+              <div style={{ display: "none" }}>
+                {/* <Nav data={cartitem} /> */}
+              </div>
             </div>
             <div className="imgbox">
               <img src={item.prdimg} alt={item.productName} />
@@ -50,7 +58,9 @@ export default function Section1(z) {
             <h5 className="desc">{item.des1}</h5>
             <p className="price">₹{item.price}</p>
             <p className="rating">Ratings ⭐ {item.rating}</p>
-            <button className="boxcardsbutton" onClick={() => orderpg(item)}>Order Now</button>
+            <button className="boxcardsbutton" onClick={() => orderpg(item)}>
+              Order Now
+            </button>
           </div>
         );
       })}

@@ -6,11 +6,11 @@ import Contact from "./contact";
 
 export default function App() {
   return (
-    <>
+    <div className="mainContainer">
       <Nav />
       <Home />
       <Section1 />
       <Contact />
-    </>
+    </div>
   );
 }

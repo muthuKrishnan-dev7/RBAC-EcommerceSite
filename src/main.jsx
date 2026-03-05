@@ -15,7 +15,7 @@ const router = createHashRouter([
     path: "/admin",
     element: <Admin />,
   },
-  {
+  { 
     path: "/Order",
     element: <Order />,
   },

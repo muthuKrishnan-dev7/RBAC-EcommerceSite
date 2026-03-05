@@ -3,13 +3,17 @@
   body::-webkit-scrollbar {
     display: none;
   }
+  .mainContainer {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
   nav {
     height: 82px;
     width: 100%;
     position: fixed;
     display: flex;
     z-index: 99;
-    overflow: hidden;
     align-items: center;
     background-color: var(--primarycolor);
   }
@@ -68,29 +72,88 @@
     display: none;
   }
 
-  /* Login Box */
-  .login-box {
+  /* Add To Cart  */
+  .addtocart {
+    height: 87vh;
+    width: 65%;
+    position: absolute;
+    right: -100%;
+    transition: 1s all;
+    top: 82px;
+    gap: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+  }
+  .addtocart > div {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+  .cartcp {
+    right: 0;
+  }
+  .top {
+    height: 65px;
+    justify-content: end;
+    padding-right: 20px;
+  }
+  .cartcross {
+    color: black;
+    font-size: 35px;
+    background-color: transparent;
+  }
+  .middle {
+    height: 387px;
+    overflow-y: scroll;
+    border: 1px solid lightgray;
+  }
+  .bottom {
+    height: 90px;
+  }
+
+  /* Login Box on Nav */
+  .login {
+    position: absolute;
     height: 250px;
-    width: 280px;
+    width: 85%;
     border-radius: 24px;
     box-shadow:
       2px 2px 4px rgba(0, 0, 0, 0.366),
       -2px -2px 4px rgba(0, 0, 0, 0.366);
-    position: absolute;
+    background-color: white;
     top: -300px;
     left: 50%;
     transition: 1s all;
-    display: flex;
-    justify-content: center;
     transform: translate(-50%, -50%);
-    margin: auto;
+  }
+  .inslogin {
+    position: absolute;
+    border-radius: 14px;
     background-color: white;
-    background: linear-gradient(150deg, #2571ea 30%, rgb(255, 255, 255) 30%);
+    height: 80%;
+    width: 85%;
+    padding: 20px 20px 20px 40px;
+  }
+  label {
+    background-color: transparent;
+  }
+  .inslogin input {
+    border: 1px solid gray;
+    padding: 0px 5px 0px 10px;
+    border-radius: 6px;
+    margin: 5px 0px 0px 0px;
+  }
+  .inslogin Button {
+    margin-top: 20px;
+    width: 40% !important;
+    padding: 2px 10px 2px 10px !important;
   }
   .cross {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    color: black;
     font-size: 30px;
     margin: 10px;
     background-color: transparent;
@@ -99,23 +162,10 @@
     top: 300px;
   }
 
-  /* Login Box Button */
-  .login-box button {
-    width: 180px;
-    height: 40px;
-    border: none;
-    font-size: 16px;
-    background-color: transparent;
-    border-radius: 8px;
-    background-color: #2571ea;
-  }
-  .login-box button:active {
-    transform: scale(1.06);
-  }
-
   /* Home Page */
   .home {
     width: 97%;
+    position: relative;
     margin: auto;
     padding: 90px 0px 0px 0px;
   }
@@ -149,7 +199,7 @@
   }
   .carousel {
     position: relative;
-    z-index: 1 !important;
+    /* z-index: 1 !important; */
   }
   .d-block {
     height: 150px !important;
@@ -637,7 +687,7 @@
 
   /* Address Page */
 
-  .address{
+  .address {
     width: 97%;
     height: 80vh;
     margin: auto;
@@ -645,7 +695,6 @@
     background-color: #fff;
     border: 2px solid yellowgreen;
   }
-
 
   /* Contact Page */
   .contactpg {

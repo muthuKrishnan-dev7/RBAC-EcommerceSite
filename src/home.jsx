@@ -48,7 +48,7 @@ export default function Home() {
 
       <Carousel
         interval={2500}
-        pause={false} 
+        pause={false}
         activeIndex={index}
         onSelect={handleSelect}
       >
