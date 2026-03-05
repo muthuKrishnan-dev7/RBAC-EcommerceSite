@@ -413,7 +413,7 @@
 }
 
 /* style for Tablet */
-@media (min-width: 426px) {
+@media (min-width: 768px) {
   body::-webkit-scrollbar {
     display: none;
   }
