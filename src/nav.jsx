@@ -107,7 +107,7 @@ export default function Nav() {
             className="ic2"
             onClick={() => cartopen("open")}
           />{" "}
-          <span>Cart</span>
+          <span>Cartt</span>
         </button>
       </div>
       {/* For Transfer the Search Value */}
